@@ -26,7 +26,7 @@
             --engenharia: #0F5C7F;         /* Azul petróleo - Ramilos Engenharia */
             --comunicacoes: #1a1a1a;       /* Cinza escuro - Ramilos Comunicações */
             --grupo: #1a1a1a;              /* Cinza escuro - Grupo Empresarial Ramilos */
-            --pousadas: #fffb00;           /* Marrom dourado - Pousadas Ramilos */
+            --pousadas: #ffe600;           /* Marrom dourado - Pousadas Ramilos */
             --representacoes: #1a1a1a;     /* Cinza escuro - Ramilos Representações */
             --representacoes-red: #E10600; /* Vermelho destaque do logo */
             --lavajato: #007FA3;           /* Azul ciano - Lava Jato Ramilos */
@@ -448,7 +448,44 @@
             color: rgba(255, 255, 255, 0.9);
         }
 
-        /* NOVO: Links de contato das empresas (Instagram e WhatsApp) */
+        /* NOVO: Botão de visita ao site da pousada */
+        .visit-site-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            margin-top: var(--spacing-sm);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            gap: 0.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .visit-site-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Específico para o card da pousada */
+        .company-pousadas .visit-site-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .company-pousadas .visit-site-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            color: #000000;
+        }
+
+        /* Links de contato das empresas (Instagram e WhatsApp) */
         .company-contact {
             display: flex;
             gap: var(--spacing-sm);
@@ -1158,6 +1195,13 @@
                     </div>
                     <h3 class="company-name">Pousadas Ramilos</h3>
                     <p class="company-desc">Rede de hospedagem com três unidades estratégicas, oferecendo conforto, hospitalidade e experiências memoráveis em destinos especiais.</p>
+                    
+                    <!-- BOTÃO ADICIONADO AQUI -->
+                    <a href="https://bio.site/Pousadasramilos" target="_blank" class="visit-site-btn" aria-label="Visitar site das Pousadas Ramilos">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visitar Site
+                    </a>
+                    
                     <div class="company-contact">
                         <a href="https://www.instagram.com/pousadasramilos/" target="_blank" class="company-contact-link instagram" aria-label="Instagram Pousadas Ramilos">
                             <i class="fab fa-instagram"></i>
